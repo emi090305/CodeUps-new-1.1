@@ -1,0 +1,43 @@
+@use "global" as *;
+
+.p-sub-mv {
+  position: relative;
+}
+
+.p-sub-mv__title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);  
+  font-size: rem(30);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.04em;
+  z-index: 1;
+  @include mq(md) {
+    font-size: rem(35);
+    letter-spacing: 0.0571em;
+  }
+}
+
+.p-sub-mv__img {
+}
+
+.p-sub-mv__img::before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,.2);  //12は不透明度
+}
+
+.p-sub-mv__img img {
+  height: rem(425);
+  object-fit: cover;
+  @include mq(md) {
+    height: rem(370);
+  }
+}

@@ -1,0 +1,93 @@
+@use "global" as *;
+
+.p-card-style01 {
+}
+
+.p-card-style01 a {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.p-card-style01 a:hover .p-card-style01__body {
+  @include mq(md) {
+    color: $white;
+    background-color: $color-main;
+  }
+}
+
+.p-card-style01__img {
+  width: 100%;
+  position: relative;
+}
+
+.p-card-style01__img::before {
+  content: "";
+  display: block;
+  padding-top: 66.5671%;  // 232÷335*100（画像の縦÷横）ここだけ変える！
+}
+
+.p-card-style01__img img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.p-card-style01__body {
+  display: flex;
+  flex: 1;
+  flex-direction: column; 
+  color: $color-main;
+  background-color: $white;
+  transition: color .3s;
+}
+
+.p-card-style01__contents {
+  padding: rem(3) rem(22);
+}
+
+.p-card-style01__title {
+  font-size: rem(18);
+  font-weight: 500;
+  line-height: 1.9444;
+  letter-spacing: 0.0555em;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.p-card-style01__text {
+  font-size: unquote('max(#{rem(14)}, 12px)');
+  line-height: 1.8571;
+  letter-spacing: 0.0714em;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin: rem(4) 0;  
+}
+
+.p-card-style01__meta {
+  display: flex;
+  align-items: flex-end;
+  margin: auto rem(22) rem(17);
+}
+
+.p-card-style01__cat {
+  font-size: unquote('max(#{rem(14)}, 12px)');
+  letter-spacing: 0.0714em;
+  color: #000;
+  background-color: #ffea2e;
+  padding: rem(1) rem(5);
+  margin-right: rem(6);
+}
+
+.p-card-style01__date {
+  font-size: unquote('max(#{rem(14)}, 12px)');
+  letter-spacing: 0.0714em;
+  margin-left: auto;
+}

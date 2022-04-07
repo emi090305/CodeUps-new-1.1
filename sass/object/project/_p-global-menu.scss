@@ -1,0 +1,75 @@
+@use "global" as *;
+
+.p-global-menu {
+  display: none;
+  @include mq(md) {
+    display: block;
+    height: inherit;
+  }
+}
+
+.p-global-menu__inner {
+  display: flex;
+  align-items: center;
+  height: inherit;
+}
+
+.p-global-menu__items {
+  display: flex;
+  height: inherit;
+}
+
+.p-global-menu__item {
+  font-size: unquote('max(#{rem(16)}, 12px)');
+  letter-spacing: .125em;
+  height: inherit;
+  margin-right: rem(30);
+}
+
+.p-global-menu__item a {
+  height: inherit;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.p-global-menu__item a::after {
+  content: "";
+  position: absolute;
+  bottom: 17%;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: #FFEA2E;
+  transition: width 0.3s ease 0s;
+}
+
+.p-global-menu__item a:hover {
+  opacity: 1;
+}
+
+.p-global-menu__item a:hover::after {
+  width: 100%;
+}
+
+//p-global-menu__itemの上書きの方法でhoverがうまくできないから個別に指定することに。
+.p-global-menu__item--contact {
+  font-size: unquote('max(#{rem(16)}, 12px)');
+  letter-spacing: .125em;
+  height: inherit;
+}
+
+.p-global-menu__item--contact a {
+  color: $color-base;
+  background-color: $white;
+  height: inherit;
+  display: flex;
+  align-items: center;
+  padding: 0 rem(32);
+  transition: color 0.3s ease 0s;
+}
+
+.p-global-menu__item--contact a:hover {
+  color: $white;
+  background-color: $color-main;
+}

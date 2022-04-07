@@ -1,0 +1,67 @@
+@use "global" as *;
+
+.p-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 101;
+}
+
+.p-header__inner {
+  height: rem(50);
+  padding-left: rem(22);
+  padding-right: rem(22);
+  background-color: rgba(17, 17, 17,0.5);
+  display: flex;
+  align-items: center;
+  transition: background-color .3s;
+  @include mq(md) {
+    padding-left: rem(32);
+    padding-right: 0;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.p-header__logo {
+  width: rem(70);
+  height: inherit;
+  @include mq(md) {
+    width: rem(94);
+  }
+}
+
+.p-header__logo a {
+  height: inherit;
+  display: flex;
+  align-items: center;
+}
+
+.p-header__hamburger {
+  position: absolute;
+  right: rem(22);
+  top: 41%;
+  transform: translateY(-50%);
+  @include mq(md) {
+    display: none;
+  }
+}
+
+.p-header__drawer-menu {
+  position: fixed;  //ドロワー固定（スクロールしても流れないように）
+  left: 0;
+  right: 0;
+  overflow: scroll;
+  padding-bottom: rem(100);
+	z-index: 100;
+  @include mq(md) {
+    opacity: 0;  //mdまできたら非表示にして下にしまう
+		z-index: -1;
+  }
+}
+
+//MV過ぎたらheader透過を無効にする
+.p-header__inner.headerColor {
+  background-color: $color-base;
+}

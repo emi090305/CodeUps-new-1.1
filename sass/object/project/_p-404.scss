@@ -1,0 +1,44 @@
+@use "global" as *;
+
+.p-404 {
+  text-align: center;
+}
+
+.p-404__title {
+  font-size: rem(40);
+  font-weight: 400;
+  line-height: .875;
+  letter-spacing: .05em;
+  color: #ffea2e;
+  opacity: .3;
+  @include mq(md) {
+    font-size: rem(60);
+    line-height: .5833;
+    letter-spacing: 0.0333em; 
+  }
+}
+
+.p-404__text {
+  font-size: rem(20);
+  letter-spacing: .1em;
+  margin-top: rem(80);
+  @include mq(md) {
+    font-size: rem(30);
+    line-height: 1.1666;
+    letter-spacing: .0666em;
+  }
+}
+
+.p-404__btn {
+  margin-top: rem(80);
+  @include mq(md) {
+    max-width: rem(360);
+    margin: rem(79) auto 0;
+  }
+}
+
+.p-404 .c-btn-main {
+  @include mq(md) {
+    padding: rem(14) 0;
+  }
+}

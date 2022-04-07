@@ -1,0 +1,10 @@
+@use "global" as *;
+
+.l-sub-content {
+  margin-top: rem(84);
+  margin-bottom: rem(123);
+  @include mq(md) {
+    margin-top: rem(67);
+    margin-bottom: rem(150);
+  }
+}

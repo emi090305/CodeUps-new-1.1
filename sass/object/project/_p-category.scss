@@ -1,0 +1,27 @@
+@use "global" as *;
+
+.p-category {
+
+}
+
+.p-category__items {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.p-category__item {
+  font-size: unquote('max(#{rem(16)}, 12px)');
+  letter-spacing: .125em;
+  padding: rem(3) rem(7);
+  margin-top: rem(13);
+  margin-right: rem(19);
+  @include mq(md) {
+    padding: rem(3) rem(10);
+    margin-right: rem(31);
+  }
+}
+
+.p-category__item.p-category__item--active {
+  color: $color-main;
+  background-color: $white;
+}

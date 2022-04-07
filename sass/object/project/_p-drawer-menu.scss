@@ -1,0 +1,22 @@
+@use "global" as *;
+
+.p-drawer-menu {
+  background-color: $color-base;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  display: none;
+}
+
+.p-drawer-menu__items {
+  padding-top: rem(193);
+}
+
+.p-drawer-menu__item a {
+  display: block;
+  font-size: rem(16);
+  letter-spacing: .125em;
+  color: $color-text;
+  width: 100%;
+  padding: rem(15) 0 rem(16);
+}

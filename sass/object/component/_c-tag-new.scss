@@ -1,0 +1,24 @@
+@use "global" as *;
+
+.c-tag-new {
+  position: absolute;
+  top: rem(-17);
+  left: rem(-16);
+  width: rem(60);
+  height: rem(60);
+  background-color: #ffba6a;
+  border-radius: 50px;
+  z-index: 1;
+}
+
+.c-tag-new::after {
+  content: "New";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: rem(16);
+  line-height: 2.1875;
+  letter-spacing: .125em;
+  color: $color-main;
+}

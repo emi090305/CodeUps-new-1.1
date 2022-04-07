@@ -1,0 +1,74 @@
+@use "global" as *;
+
+.p-works {
+  @include mq(md) {
+    position: relative;
+  }
+}
+
+.p-works .c-section-title__en {
+  @include mq(md) {
+    position: absolute;
+    top: -116%;
+    left: 84.3%;
+  }
+}
+
+.p-works__wrapper {
+  @include mq(md) {
+    display: flex;
+    align-items: center;
+    max-width: rem(1150);
+    padding: 0 rem(25);
+    margin: rem(115) auto 0;
+  }
+}
+
+.p-works__slider {
+  margin-top: rem(46);
+  position: relative;  //ページネーションを外に出すだめの記述
+  @include mq(md) {
+    width: 50.6363%;
+    margin-top: 0;
+    margin-right: rem(32);
+  }
+}
+
+.p-works .slide-img {
+  width: 100%;
+  position: relative;
+  background-color: #111;  //黒いマスク
+}
+
+.p-works .slide-img::before {
+  content: "";
+  display: block;
+  padding-top: 69.8384%;  // 232÷335*100（画像の縦÷横）ここだけ変える！
+}
+
+.p-works .slide-img img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  //黒いマスク
+  display: block;
+  opacity: .8;
+}
+
+// pc黒背景
+.p-works__bg {
+  @include mq(md) {
+    position: absolute;
+    top: 14.2%;
+    right: 0;
+    width: 70%;
+    height: rem(550);
+    background-color: $color-main;
+    z-index: -1;
+  }
+}

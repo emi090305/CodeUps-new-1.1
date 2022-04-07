@@ -1,0 +1,44 @@
+@use "global" as *;
+
+.p-contact {
+  background-color: #3d3d3d;
+  padding-top: rem(67);
+  padding-bottom: rem(64);
+  @include mq(md) {
+    padding-top: rem(144);
+    padding-bottom: rem(149);
+  }
+}
+
+.p-contact .c-section-title__en {
+  @include mq(md) {
+    position: absolute;
+    top: -201%;
+    left: 19.3%;
+  }
+}
+
+.p-contact__text {
+  font-size: unquote('max(#{rem(16)}, 12px)');
+  letter-spacing: .125em;
+  margin-top: rem(18);
+  @include mq(md) {
+    text-align: center;
+    margin-top: rem(17);
+  }
+}
+
+.p-contact__btn {
+  margin-top: rem(45);
+  @include mq(md) {
+    max-width: rem(360);
+    margin: rem(61) auto 0;
+  }
+}
+
+.p-contact__btn .c-btn-main {
+  background-color: $color-main;
+  @include mq(md) {
+    padding: rem(14) 0;
+  }
+}

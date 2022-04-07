@@ -1,0 +1,22 @@
+@use "global" as *;
+
+.c-btn-main {
+  display: inline-block;
+  font-size: rem(20);
+  letter-spacing: .1em;
+  border: 1px solid $white;
+  width: 100%;
+  text-align: center;
+  padding: rem(9) 0;
+  background-image: linear-gradient(to right, $white 0%, $white 50%, $color-main 50%, $color-main 100%);
+  background-repeat: no-repeat;
+  background-position: 100% 0;
+  background-size: 200% auto;
+  transition: background-position ease 0.3s;
+}
+
+.c-btn-main:hover {
+  color: $color-main;
+  background-position: 0 0;
+  opacity: 1;
+}

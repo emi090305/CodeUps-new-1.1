@@ -1,0 +1,30 @@
+@use "global" as *;
+
+.p-sub-blog {
+  @include mq(md) {
+  }
+}
+
+.p-sub-blog__inner {
+  @include mq(md) {
+    max-width: $inner + strip-unit($padding-pc) * 2;
+    padding-right: $padding-pc;
+    padding-left: $padding-pc;
+    margin: 0 auto;
+  }
+}
+
+.p-sub-blog__cards {
+  margin-top: rem(37);
+  position: relative;
+  @include mq(md) {
+    margin-top: rem(40);
+  }
+}
+
+.p-sub-blog .l-pagination {
+  margin-top: rem(80);
+  @include mq(md) {
+    margin-top: rem(104);
+  }
+}

@@ -1,0 +1,48 @@
+@use "global" as *;
+
+.gallery {
+  width: 100%;
+  margin: 40px auto;
+
+  //メイン
+  &-slider {
+    width: 100%;
+    height: auto;
+    margin: 0 0 rem(10) 0;
+
+    .swiper-slide {
+      width: auto;
+      height: rem(400);
+
+      img {
+        display: block;
+        width: auto;
+        height: 100%;
+        margin: 0 auto;
+      }
+    }
+  }
+
+  //サムネイル
+  &-thumbs {
+    width: 100%;
+    padding: 0;
+    overflow: hidden;
+
+    .swiper-slide {
+      width: 100px;
+      height: 100px;
+      text-align: center;
+      overflow: hidden;
+
+      &-active {
+        opacity: 1;
+      }
+
+      img {
+        width: auto;
+        height: 100%;
+      }
+    }
+  }
+}

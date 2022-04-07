@@ -1,0 +1,22 @@
+@use "global" as *;
+
+.p-card-list02 {
+  @include mq(md) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: rem(32);
+  }
+}
+
+.p-card-list02__item {
+  @include mq(md) {
+    width: calc((100% - #{rem(32)} * 3) / 4);
+  }
+}
+
+.p-card-list02__item + .p-card-list02__item {
+  margin-top: rem(24);
+  @include mq(md) {
+    margin-top: 0;
+  }
+}

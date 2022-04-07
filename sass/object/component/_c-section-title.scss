@@ -1,0 +1,28 @@
+@use "global" as *;
+
+.c-section-title {
+  font-size: rem(20);
+  letter-spacing: .1em;
+  font-weight: 400;
+  text-align: center;
+  position: relative;
+  @include mq(md) {
+    font-size: rem(30);
+  }
+}
+
+.c-section-title__en {
+  position: absolute;
+  top: -166%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: rem(50);
+  letter-spacing: .04em;
+  font-family: $second-font-family;
+  color: $color-accent;
+  opacity: .2;
+  @include mq(md) {
+    font-size: rem(110);
+    letter-spacing: 0.0181em;
+  }
+}

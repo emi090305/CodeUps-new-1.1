@@ -1,0 +1,29 @@
+@use "global" as *;
+
+.p-relation {
+}
+
+.p-relation__title {
+  font-size: unquote('max(#{rem(16)}, 12px)');
+  font-weight: 400;
+  letter-spacing: .125em;
+  border: 1px solid $white;
+  text-align: center;
+  padding: rem(9) 0;
+  @include mq(md) {
+    padding: rem(7) 0;
+  }
+}
+
+.p-relation__cards {
+  margin-top: rem(30);
+  @include mq(md) {
+    margin-top: rem(80);
+  }
+}
+
+.p-relation .p-card-style01__img::before {
+  @include mq(md) {
+    padding-top: 58.9641%;
+  }
+}

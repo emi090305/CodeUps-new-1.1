@@ -1,0 +1,34 @@
+@use "global" as *;
+
+.next-page {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: rem(310);
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.next-page__list,
+.next-page__archive {
+  display: inline-block;
+  font-size: unquote('max(#{rem(16)}, 12px)');
+  border: 1px solid $white;
+  width: rem(70);
+  height: rem(24);
+  text-align: center;
+  transition: color .3s;
+}
+
+.next-page__list:hover,
+.next-page__archive:hover {
+  color: $color-main;
+  background-color: $white;
+}
+
+.next-page__archive {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}

@@ -1,0 +1,40 @@
+@use "global" as *;
+
+.p-sub-content {
+}
+
+.p-sub-content__idea-title {
+  font-size: rem(20);
+  font-weight: 400;
+  letter-spacing: .1em;
+  text-align: center;
+  @include mq(md) {
+    font-size: rem(25);
+    letter-spacing: .08em;
+  }
+}
+
+.p-sub-content__idea-text {
+  font-size: unquote('max(#{rem(16)}, 12px)');
+  letter-spacing: .125em;
+  margin-top: rem(21);
+  @include mq(md) {
+    line-height: 2.1875;
+    text-align: center;
+    margin-top: rem(22);
+  }
+}
+
+.p-sub-content__cards {
+  margin-top: rem(85);
+  @include mq(md) {
+    margin-top: rem(150);
+  }
+}
+
+.p-sub-content__card + .p-sub-content__card {
+  margin-top: rem(50);
+  @include mq(md) {
+    margin-top: rem(104);
+  }
+}

@@ -1,0 +1,161 @@
+@use "global" as *;
+
+.p-single {
+
+}
+
+.p-single__inner.l-inner {
+  @include mq(md) {
+    max-width: rem(850);
+    margin: 0 auto;
+  }
+}
+
+.p-single__title {
+  font-size: rem(20);
+  font-weight: 400;
+  line-height: 1.75;
+  letter-spacing: .02em;
+  @include mq(md) {
+    font-size: rem(23);
+  }
+}
+
+.p-single__meta {
+  display: flex;
+  align-items: center;
+  margin-top: rem(13);
+  @include mq(md) {
+    margin-top: rem(18);
+  }
+}
+
+.p-single__date {
+  font-size: unquote('max(#{rem(16)}, 12px)');
+  letter-spacing: .025em;
+  margin-right: rem(24);
+}
+
+.p-single__cat {
+  font-size: unquote('max(#{rem(16)}, 12px)');
+  letter-spacing: .125em;
+  border: 1px solid $white;
+  padding: rem(8) rem(20);
+}
+
+.p-single__img,
+.p-single figure {  //アイキャッチと途中に入る画像
+  width: 100vw;
+  margin: 0 calc(50% - 50vw);
+  position: relative;
+  @include mq(md) {
+    width: 100%;
+    margin: 0; 
+  }
+}
+
+.p-single__img::before,
+.p-single figure::before {
+  content: "";
+  display: block;
+  padding-top: 66.9333%;  // 232÷335*100（画像の縦÷横）ここだけ変える！
+  @include mq(md) {
+    padding-top: 53.375%;  // 232÷335*100（画像の縦÷横）ここだけ変える！
+  }
+}
+
+.p-single__img img,
+.p-single figure img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.p-single__img {
+  margin-top: rem(16);
+  @include mq(md) {
+    margin-top: rem(32);
+  }
+}
+
+.p-single figure {
+  margin-top: rem(24);
+  @include mq(md) {
+    margin-top: rem(32);
+  }
+}
+
+.p-single p {
+  font-size: unquote('max(#{rem(16)}, 12px)');
+  line-height: 2.1875;
+  letter-spacing: .025em;
+  margin-top: rem(24);
+  @include mq(md) {
+    margin-top: rem(32);
+  }
+}
+
+.p-single h2 {
+  font-size: rem(20);
+  font-weight: 400;
+  letter-spacing: .1em;
+  border-left: rem(3) solid #c4c4c4;
+  padding-left: rem(6);
+  margin-top: rem(24);
+  @include mq(md) {
+    margin-top: rem(32);
+  }
+}
+
+.p-single h3 {
+  display: inline-block;
+  font-size: rem(18);
+  font-weight: 400;
+  letter-spacing: 0.1111em;
+  border-bottom: rem(3) solid $white;
+  position: relative;
+  padding-left: rem(9);
+  margin-top: rem(22);
+  @include mq(md) {
+    margin-top: rem(31);
+  }
+}
+
+.p-single h3::before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: rem(-3);
+  left: 0;
+  width: rem(73);
+  border-bottom: rem(3) solid #ffea2e;
+}
+
+.p-single ul,
+.p-single ol {
+  margin-top: rem(24);
+  @include mq(md) {
+    margin-top: rem(32);
+  }
+}
+
+.p-single ul li {
+  font-size: unquote('max(#{rem(16)}, 12px)');
+  line-height: 2.1875;
+  letter-spacing: .025em;
+  list-style: disc;
+  list-style-position: inside;
+}
+
+.p-single ol li {
+  font-size: unquote('max(#{rem(16)}, 12px)');
+  line-height: 2.1875;
+  letter-spacing: .025em;
+  list-style: decimal;
+  list-style-position: inside;
+}

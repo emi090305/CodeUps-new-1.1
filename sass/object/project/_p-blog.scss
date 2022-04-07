@@ -1,0 +1,38 @@
+@use "global" as *;
+
+.p-blog {
+  @include mq(md) {
+    position: relative;
+  }
+}
+
+.p-blog .c-section-title__en {
+  @include mq(md) {
+    position: absolute;
+    top: -133%;
+    left: 89%;
+  }
+}
+
+.p-blog__items {
+  margin-top: rem(64);
+  position: relative;
+  @include mq(md) {
+    margin-top: rem(35);
+  }
+}
+
+.p-blog__btn {
+  margin-top: rem(24);
+  @include mq(md) {
+    max-width: rem(360);
+    margin: rem(54) auto 0;
+  }
+}
+
+.p-blog__btn .c-btn-main {
+  @include mq(md) {
+    font-size: unquote('max(#{rem(16)}, 12px)');
+    padding: rem(17) 0;
+  }
+}

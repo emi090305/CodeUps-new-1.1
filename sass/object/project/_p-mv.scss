@@ -1,0 +1,44 @@
+@use "global" as *;
+
+.p-mv {
+  position: relative;
+}
+
+.p-mv__title-box {
+  position: absolute;
+  top: 52.3%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+  z-index: 2;
+  @include mq(md) {
+    top: 55%;
+  }
+}
+
+.p-mv__title {
+  font-size: rem(28);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.0178em;
+  @include mq(md) {
+    font-size: rem(50);
+  }
+}
+
+.p-mv__sub-title {
+  font-size: rem(20);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.025em;
+  margin-top: rem(24);
+  @include mq(md) {
+    font-size: rem(25);
+  }
+}
+
+.p-mv__slider img {
+  height: 100vh;
+  object-fit: cover;
+}

@@ -1,0 +1,41 @@
+@use "global" as *;
+
+.c-to-top {
+  position: fixed;
+  right: rem(20);
+  bottom: rem(41);
+  width: rem(45);
+  height: rem(45);
+  background-color: $white;
+  z-index: 1;
+  transition: all .3s ease 0s;
+  @include mq(md) {
+    right: rem(31);
+    bottom: rem(32); 
+  }
+}
+
+.c-to-top::before {
+  content: "";
+  position: absolute;
+  top: 42%;
+  left: 0;
+  right: 0;
+  width: rem(18);
+  height: rem(18);
+  border-top: rem(3) solid $color-main;
+  border-right: rem(3) solid $color-main;
+  transform: rotate(-45deg);
+  transition: all .3s ease 0s;
+  margin: auto;
+}
+
+.c-to-top:hover {
+  background-color: $color-main;
+  opacity: 1;
+}
+
+.c-to-top:hover::before {
+  border-top: rem(3) solid $white;
+  border-right: rem(3) solid $white;
+}

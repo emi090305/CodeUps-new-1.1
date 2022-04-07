@@ -1,0 +1,45 @@
+@use "global" as *;
+
+//元の各項目のエラーメッセージ削除
+.wpcf7-not-valid-tip {
+  display: none;
+}
+
+//エラーメッセージスタイル
+.wpcf7-response-output {
+  font-size: unquote('max(#{rem(16)}, 12px)');
+  letter-spacing: 0.125em;
+  color: #ff5757;
+  text-align: center;
+}
+
+.wpcf7 form .wpcf7-response-output {
+  padding: 0;
+}
+
+.wpcf7 form.invalid .wpcf7-response-output,
+.wpcf7 form.unaccepted .wpcf7-response-output,
+.wpcf7 form.payment-required .wpcf7-response-output {
+  border: none;
+}
+
+//inputの背景色変更（ここだけ上書きにしないと効かない）
+.p-sub-contact .wpcf7 .wpcf7-not-valid {
+  background: #ffdcdc;
+}
+
+//元々の下部エラーメッセージを削除
+.wpcf7-response-output {
+  display: none;
+}
+
+//上に複製したエラーメッセージは表示する
+.wpcf7-response-output.wpcf7-response-output--position {
+  display: block;
+}
+
+//送信時ローダーの位置変更
+.wpcf7-spinner {
+  display: block;
+}
+

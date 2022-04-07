@@ -1,0 +1,45 @@
+@use "global" as *;
+
+.p-sub-works {
+}
+
+.p-sub-works__inner {
+  @include mq(md) {
+    max-width: $inner + strip-unit($padding-pc) * 2;
+    padding-right: $padding-pc;
+    padding-left: $padding-pc;
+    margin: 0 auto;
+  }
+}
+
+.p-sub-works__cards {
+  margin-top: rem(16);
+  @include mq(md) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: rem(114) rem(48);  //行間、列間の順
+    margin-top: rem(40);
+  }
+}
+
+.p-sub-works__card {
+  display: inline-block;
+  width: 100%;
+  @include mq(md) {
+    width: calc((100% - #{rem(48)} * 1) / 2);  //remにするなら #{rem(114)}
+  }
+}
+
+.p-sub-works__card + .p-sub-works__card {
+  margin-top: rem(48);
+  @include mq(md) {
+    margin-top: 0;
+  }
+}
+
+.p-sub-works .l-pagination {
+  margin-top: rem(80);
+  @include mq(md) {
+    margin-top: rem(104);
+  }
+}

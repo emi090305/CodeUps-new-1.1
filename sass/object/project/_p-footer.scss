@@ -1,0 +1,91 @@
+@use "global" as *;
+
+.p-footer {
+  text-align: center;
+  padding: rem(51) rem(32);
+  @include mq(md) {
+    padding: rem(35) rem(33);
+  }
+}
+
+.p-footer__wrapper {
+  @include mq(md) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.p-footer__logo {
+  display: inline-block;
+  width: rem(70);
+}
+
+.p-footer__menu-items {
+  margin-top: rem(1);
+  @include mq(md) {
+    display: flex;
+    margin-top: 0;
+  }
+}
+
+.p-footer__menu-item {
+  font-size: rem(16);
+  font-size: unquote("max(#{rem(16)}, 12px)");
+  letter-spacing: 0.075em;
+}
+
+.p-footer__menu-item + .p-footer__menu-item {
+  margin-top: rem(7);
+  @include mq(md) {
+    margin-top: 0;
+    margin-left: rem(44);
+  }
+}
+
+.p-footer__menu-item:first-of-type {
+  @include mq(md) {
+    display: none;
+  }
+}
+
+.p-footer__menu-item a {
+  @include mq(md) {
+    position: relative;
+  }
+}
+
+.p-footer__menu-item a::after {
+  @include mq(md) {
+    content: "";
+    position: absolute;
+    bottom: -25%;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: #ffea2e;
+    transition: width 0.3s ease 0s;
+  }
+}
+
+.p-footer__menu-item a:hover {
+  @include mq(md) {
+    opacity: 1;
+  }
+}
+
+.p-footer__menu-item a:hover::after {
+  @include mq(md) {
+    width: 100%;
+  }
+}
+
+.p-footer__copy {
+  font-size: rem(11);
+  letter-spacing: 0.109em;
+  margin-top: rem(32);
+  @include mq(md) {
+    font-size: unquote("max(#{rem(15)}, 12px)");
+    margin-top: rem(76);
+  }
+}

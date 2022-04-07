@@ -1,0 +1,45 @@
+@use "global" as *;
+
+.c-hamburger {
+  z-index: 9999;
+  @include mq(md) {
+    display: none;
+  }
+}
+
+.c-hamburger span {
+  display: block;
+  background-color: $white;
+  height: 2px;
+  width: 24px;
+  transition: ease .3s;
+  position: relative;
+}
+
+.c-hamburger span:nth-child(1) {
+  top: 0;
+}
+
+.c-hamburger span:nth-child(2) {
+  margin: 5px 0;
+}
+
+.c-hamburger span:nth-child(3) {
+  top: 0;
+}
+
+/*OPEN時の動き*/
+.c-hamburger.open span:nth-child(1) {
+  top: 7px;
+  transform: rotate(45deg);
+}
+
+.c-hamburger.open span:nth-child(2) {
+  transform: translateY(-50%);
+  opacity: 0;
+}
+
+.c-hamburger.open span:nth-child(3) {
+  top: -7px;
+  transform: rotate(-45deg);
+}

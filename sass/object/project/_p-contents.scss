@@ -1,0 +1,27 @@
+@use "global" as *;
+
+.p-contents__title {
+  display: inline-block;
+  font-size: rem(20);
+  font-weight: 400;
+  letter-spacing: .02em;
+  background-color: $color-base;
+  border: 1px solid $white;
+  border-radius: 32px;
+  padding: rem(7) rem(23);
+  margin-left: rem(24);
+  @include mq(md) {
+    margin-left: rem(38);
+  }
+}
+
+.p-contents__text {
+  font-size: unquote('max(#{rem(16)}, 12px)');
+  line-height: 2.1875;
+  letter-spacing: .025em;
+  border: 1px solid $white;
+  padding: rem(55) rem(10) rem(32);
+  @include mq(md) {
+    padding: rem(43) rem(21) rem(31);
+  }
+}

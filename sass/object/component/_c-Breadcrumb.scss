@@ -1,0 +1,10 @@
+@use "global" as *;
+
+.c-Breadcrumb {
+  padding-top: rem(12);
+}
+
+.c-Breadcrumb span {
+  font-size: unquote('max(#{rem(16)}, 12px)');
+  letter-spacing: .0625em;
+}
